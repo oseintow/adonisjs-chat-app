@@ -10,10 +10,7 @@ $(function() {
         if(username.val() == "") return;
 
         localStorage.setItem("username", username.val());
-        personSocket.emit('new user', username.val(), function(callback){
-            currentuser = username.val();
-            console.log(callback);
-        });
+        addUser(username.val());
     });
 
     $( "#leave" ).click(function(e) {
@@ -47,14 +44,23 @@ $(function() {
        $("#chatPersonMessages").append("<li>" + data + "</li>");
     });
 
+    var addUser = function(username) {
+        personSocket.emit('new user', username , function(callback){
+            currentuser = username;
+            console.log(callback);
+        });
+    }
+
     personSocket.emit("get users",function(callback){
         var username = localStorage.getItem("username");
         $("#username").val(username);
+
+        addUser(username);
         callback.users.forEach(function (user) {
             if(username != user) {
                 $("#personList").append("<li><a class='userlist' style='cursor: pointer' data-value=" + user + ">" + user + "</a></li>");
             }
-            })
+        })
     });
 
 
