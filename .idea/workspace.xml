@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="person.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/person.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -40,6 +40,16 @@
                 <marker date="1469361409000" expanded="true" signature="718:733" placeholder="..." />
                 <marker date="1469361409000" expanded="true" signature="1972:1987" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonSocket.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,16 +86,6 @@
       </file>
       <file leaf-file-name=".env.example" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env.example">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ace" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ace">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -179,10 +179,10 @@
         <option value="$PROJECT_DIR$/app/Http/SocketsControllers/UserSocket.js" />
         <option value="$PROJECT_DIR$/resources/views/master.njk" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/chat.njk" />
         <option value="$PROJECT_DIR$/public/person.js" />
+        <option value="$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js" />
       </list>
     </option>
   </component>
@@ -506,12 +506,12 @@
       <workItem from="1469168566391" duration="2608000" />
       <workItem from="1469171239613" duration="56917000" />
       <workItem from="1469284878014" duration="25513000" />
-      <workItem from="1469313870418" duration="21077000" />
+      <workItem from="1469313870418" duration="22660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106115000" />
+    <option name="totallyTimeSpent" value="107698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="985" extended-state="6" />
@@ -639,6 +639,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <marker date="1469221256000" expanded="true" signature="14:393" placeholder="/*...*/" />
+            <marker date="1469221256000" expanded="true" signature="427:739" placeholder="/*...*/" />
+            <marker date="1469221256000" expanded="true" signature="786:914" placeholder="{...}" />
+            <marker date="1469221256000" expanded="true" signature="797:912" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,34 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/SocketIO.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="46" column="7" selection-start-line="7" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -938,6 +920,30 @@
             <marker date="1469361409000" expanded="true" signature="718:733" placeholder="..." />
             <marker date="1469361409000" expanded="true" signature="1972:1987" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="46" column="7" selection-start-line="7" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

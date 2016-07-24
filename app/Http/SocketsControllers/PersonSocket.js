@@ -6,8 +6,8 @@ class PersonSocket{
 
     constructor(io){
         this.io = io;
-        this.personRoom = this.io.of("/persons");
-        this.personRoom.on('connection', (socket) => this.init(socket) );
+        this.personIO = this.io.of("/persons");
+        this.personIO.on('connection', (socket) => this.init(socket) );
         this.persons = [];
     }
 
@@ -32,12 +32,13 @@ class PersonSocket{
     getUsers(socket){
         socket.on("get users", (callback) =>{
             callback({users: this.persons})
+            console.log(Object.keys(socket.adapter.rooms));
         });
     }
 
     leave(socket){
         socket.on("leave", (data) =>{
-            this.personRoom.in(data).clients((error, clients)  =>{
+            this.personIO.in(data).clients((error, clients)  =>{
                 if (error) throw error;
                 if (clients.length == 1) {
                     var personIndex = this.persons.indexOf(data);
@@ -50,7 +51,7 @@ class PersonSocket{
 
     newMessage(socket){
         socket.on("new message", (data) =>{
-            this.personRoom.in(data.receiver).emit("get message",data.message);
+            this.personIO.in(data.receiver).emit("get message",data.message);
         });
     }
 
