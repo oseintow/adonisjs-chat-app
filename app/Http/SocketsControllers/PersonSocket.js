@@ -11,11 +11,16 @@ class PersonSocket{
         this.persons = [];
     }
 
-    init(socket) {;
+    init(socket) {
+        this.disconnect(socket);
         this.newUser(socket);
         this.getUsers(socket);
         this.newMessage(socket);
         this.leave(socket);
+    }
+
+    disconnect(socket){
+        socket.on('disconnect', () => console.log("client disconnected"));
     }
 
     newUser(socket){
@@ -47,6 +52,7 @@ class PersonSocket{
                 }
             });
             socket.leave(data);
+            socket.disconnect()
         });
     }
 
