@@ -27,7 +27,6 @@ $(function() {
     });
 
     personSocket.on("user left",function(data){
-        console.log(data);
         $("#personList li a[data-value='" + data + "']").parent("li").remove();
     });
 

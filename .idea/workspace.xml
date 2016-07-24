@@ -44,13 +44,13 @@
       <file leaf-file-name="person.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/person.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="286">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding>
-                <marker date="1469385826000" expanded="true" signature="622:637" placeholder="..." />
-                <marker date="1469385826000" expanded="true" signature="1565:1662" placeholder="..." />
-                <marker date="1469385826000" expanded="true" signature="1593:1608" placeholder="..." />
-                <marker date="1469385826000" expanded="true" signature="1636:1657" placeholder="..." />
+                <marker date="1469385883000" expanded="true" signature="622:637" placeholder="..." />
+                <marker date="1469385883000" expanded="true" signature="1538:1635" placeholder="..." />
+                <marker date="1469385883000" expanded="true" signature="1566:1581" placeholder="..." />
+                <marker date="1469385883000" expanded="true" signature="1609:1630" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -513,12 +513,12 @@
       <workItem from="1469168566391" duration="2608000" />
       <workItem from="1469171239613" duration="56917000" />
       <workItem from="1469284878014" duration="25513000" />
-      <workItem from="1469313870418" duration="28651000" />
+      <workItem from="1469313870418" duration="28749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113689000" />
+    <option name="totallyTimeSpent" value="113787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="985" extended-state="6" />
@@ -963,13 +963,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/person.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="286">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding>
-            <marker date="1469385826000" expanded="true" signature="622:637" placeholder="..." />
-            <marker date="1469385826000" expanded="true" signature="1565:1662" placeholder="..." />
-            <marker date="1469385826000" expanded="true" signature="1593:1608" placeholder="..." />
-            <marker date="1469385826000" expanded="true" signature="1636:1657" placeholder="..." />
+            <marker date="1469385883000" expanded="true" signature="622:637" placeholder="..." />
+            <marker date="1469385883000" expanded="true" signature="1538:1635" placeholder="..." />
+            <marker date="1469385883000" expanded="true" signature="1566:1581" placeholder="..." />
+            <marker date="1469385883000" expanded="true" signature="1609:1630" placeholder="..." />
           </folding>
         </state>
       </provider>
