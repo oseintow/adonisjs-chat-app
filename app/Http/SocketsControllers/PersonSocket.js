@@ -43,6 +43,7 @@ class PersonSocket{
                 if (clients.length == 1) {
                     var personIndex = this.persons.indexOf(data);
                     this.persons.splice(personIndex, 1);
+                    socket.broadcast.emit("user left",data);
                 }
             });
             socket.leave(data);

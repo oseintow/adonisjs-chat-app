@@ -1,8 +1,35 @@
 
 $(function() {
     var personSocket = io("http://" + "192.168.1.2:3700" + "/persons");
+
     var selectedPerson;
     var currentuser;
+
+    personSocket.on('connect', function () {
+        console.log('You are connected');
+
+        personSocket.emit("get users",function(callback){
+            var username = localStorage.getItem("username");
+            $("#username").val(username);
+            addUser(username);
+            $("#personList").html("");
+            callback.users.forEach(function (user) {
+                if(username != user) {
+                    $("#personList").append("<li><a class='userlist' style='cursor: pointer' data-value=" + user + ">" + user + "</a></li>");
+                }
+            })
+        });
+
+    });
+
+    personSocket.on('disconnect', function () {
+        console.log('You are disconnected');
+    });
+
+    personSocket.on("user left",function(data){
+        console.log(data);
+        $("#personList li a[data-value='" + data + "']").parent("li").remove();
+    });
 
     $( "#enterName" ).click(function(e) {
         e.preventDefault();
@@ -50,19 +77,6 @@ $(function() {
             console.log(callback);
         });
     }
-
-    personSocket.emit("get users",function(callback){
-        var username = localStorage.getItem("username");
-        $("#username").val(username);
-
-        addUser(username);
-        callback.users.forEach(function (user) {
-            if(username != user) {
-                $("#personList").append("<li><a class='userlist' style='cursor: pointer' data-value=" + user + ">" + user + "</a></li>");
-            }
-        })
-    });
-
 
 });
 
