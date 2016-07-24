@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>AdonisJs - Node.Js MVC Framework</title>
+  {#<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>#}
+  <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  {#<link rel="stylesheet" type="text/css" href="style.css">#}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+  {#<script type="text/javascript" src="socket.io.min.js"></script>#}
+  <script src="jquery.min.js"></script>
+</head>
+<body>
+
+  <section>
+    <div class="__wrapper">
+      {% block content %}
+      {% endblock %}
+
+      {% block footer %}
+      {% endblock %}
+    </div><!-- end wrapper -->
+  </section>
+
+</body>
+</html>

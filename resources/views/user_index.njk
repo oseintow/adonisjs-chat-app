@@ -1,0 +1,12 @@
+
+{% extends 'master' %}
+
+{% block content %}
+    {%for user in users %}
+        <h2>{{ user.firstname }}</h2>
+    {% endfor %}
+
+{% endblock %}
+
+
+

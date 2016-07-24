@@ -1,0 +1,50 @@
+{% extends 'master' %}
+
+{% block content %}
+    <div class="container">
+        I am in socket
+        <button onclick="send()">hey there</button>
+        <br/>
+
+        <input type="text" id="room">
+        Hey there
+
+        <span></span>
+    </div>
+
+    <script type="text/javascript">
+        var socket = io(window.host);
+        self = this;
+        self.tom = 0;
+        socket.on('sweet', function (data) {
+            console.log(data);
+            document.querySelector('span').insertAdjacentHTML("beforebegin",JSON.stringify(data) + "<br/><br/>");
+            document.querySelector('span').insertAdjacentHTML("beforebegin", "  " + self.tom++  + ".  ");
+        });
+
+        socket.on('testing', function (data) {
+            console.log(data);
+            document.querySelector('span').insertAdjacentHTML("beforebegin",JSON.stringify(data) + "<br/><br/>");
+            document.querySelector('span').insertAdjacentHTML("beforebegin", "  " + self.tom++  + ".  ");
+        });
+
+
+        send = function(){
+            var t = document.getElementById("room").value;
+            console.log(t);
+            socket.emit('tom', { my: 'data' }, function(callback){
+                console.log(callback)
+                document.querySelector('span').insertAdjacentHTML("beforebegin",JSON.stringify(callback) + "<br/><br/>");
+                document.querySelector('span').insertAdjacentHTML("beforebegin", "  " + self.tom++  + ".  ");
+            });
+        }
+
+        socket.emit('tom', { my: 'data' }, function(callback){
+            console.log(callback)
+            document.querySelector('span').insertAdjacentHTML("beforebegin",JSON.stringify(callback) + "<br/><br/>");
+            document.querySelector('span').insertAdjacentHTML("beforebegin", "  " + self.tom++  + ".  ");
+        });
+    </script>
+{% endblock %}
+
+
