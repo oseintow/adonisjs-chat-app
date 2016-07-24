@@ -33,14 +33,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/person.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state relative-caret-position="520">
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding>
-                <marker date="1469358551000" expanded="true" signature="848:863" placeholder="..." />
-                <marker date="1469358551000" expanded="true" signature="1854:1869" placeholder="..." />
+                <marker date="1469360157000" expanded="true" signature="848:863" placeholder="..." />
+                <marker date="1469360157000" expanded="true" signature="1876:1891" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -49,28 +49,28 @@
       <file leaf-file-name="Socket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="390">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonSocket.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Person.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Person.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="46" column="7" selection-start-line="7" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonSocket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="572">
               <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/session.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/resources/views/master.njk" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/resources/views/chat.njk" />
-        <option value="$PROJECT_DIR$/public/person.js" />
         <option value="$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js" />
+        <option value="$PROJECT_DIR$/public/person.js" />
       </list>
     </option>
   </component>
@@ -494,12 +494,12 @@
       <workItem from="1469168566391" duration="2608000" />
       <workItem from="1469171239613" duration="56917000" />
       <workItem from="1469284878014" duration="25513000" />
-      <workItem from="1469313870418" duration="19780000" />
+      <workItem from="1469313870418" duration="19919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104818000" />
+    <option name="totallyTimeSpent" value="104957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="985" extended-state="6" />
@@ -834,30 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="7" selection-start-line="7" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/SocketIO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/session.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -908,22 +884,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/person.js">
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <marker date="1469358551000" expanded="true" signature="848:863" placeholder="..." />
-            <marker date="1469358551000" expanded="true" signature="1854:1869" placeholder="..." />
-          </folding>
+        <state relative-caret-position="572">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/PersonSocket.js">
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/SocketIO.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="572">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/SocketsControllers/Person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="46" column="7" selection-start-line="7" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <marker date="1469360157000" expanded="true" signature="848:863" placeholder="..." />
+            <marker date="1469360157000" expanded="true" signature="1876:1891" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -39,6 +39,8 @@ $(function() {
 
         $("#chatPersonMessages").append("<li>" + msg.val() + "</li>");
         personSocket.emit("new message", { receiver: selectedPerson, message: msg.val() });
+
+        msg.val("");
     });
 
     personSocket.on("get message",function(data){
