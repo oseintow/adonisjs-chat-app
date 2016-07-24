@@ -13,38 +13,44 @@ class PersonSocket{
         });
         this.persons = [];
         this.messages = [];
-        this.users = [];
     }
 
     init(socket) {;
         this.newUser(socket);
         this.getUsers(socket);
         this.newMessage(socket);
+        this.leave(socket);
     }
 
     newUser(socket){
         socket.on("new user", (data, callback) =>{
-            if(!this.persons.indexOf(data) > -1){
-                // console.log("Room already exist")
-                this.persons.push(data);
-                // return;
-            }
-
-            this.users[socket.id] = data;
-            console.log(this.users[socket.id]);
-            console.log(socket.id);
-            console.log(this.users);
             socket.join(data);
             callback({message: "Name added to room"});
-            socket.broadcast.emit("new user", {user : data});
+            if(this.persons.indexOf(data) < 0){
+                this.persons.push(data);
+                socket.broadcast.emit("new user", {user : data});
+            }
+            console.log(this.persons);
         });
-
-
     }
 
     getUsers(socket){
         socket.on("get users", (callback) =>{
             callback({users: this.persons})
+        });
+    }
+
+    leave(socket){
+        socket.on("leave", (data) =>{
+            this.personRoom.in(data).clients((error, clients)  =>{
+                if (error) throw error;
+                if (clients.length == 1) {
+                    var personIndex = this.persons.indexOf(data);
+                    this.persons.splice(personIndex, 1);
+                }
+                console.log(this.persons);
+            });
+            socket.leave(data);
         });
     }
 

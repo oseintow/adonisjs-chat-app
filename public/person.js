@@ -4,7 +4,8 @@ $(function() {
     var selectedPerson;
     var currentuser;
 
-    $( "#enterName" ).click(function() {
+    $( "#enterName" ).click(function(e) {
+        e.preventDefault();
         var username = $("#username");
         if(username.val() == "") return;
 
@@ -13,6 +14,13 @@ $(function() {
             currentuser = username.val();
             console.log(callback);
         });
+    });
+
+    $( "#leave" ).click(function(e) {
+        e.preventDefault();
+        var username = localStorage.getItem("username");
+        localStorage.removeItem(username);
+        personSocket.emit('leave', username);
     });
 
     personSocket.on('new user', function(data){
