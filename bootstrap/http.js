@@ -80,21 +80,11 @@ module.exports = function (callback) {
       */
       const Server = use('Adonis/Src/Server')
 
-        use('App/Http/SocketsControllers/Socket')(Server.getInstance());
-        // let sock = use('App/Http/socket')
-        // new sock(Server.getInstance());
 
-       // const io = use("socket.io")(Server.getInstance())
-       //
-       //  const Config = use("Config");
-       //  io.on("connection",(socket)=>{
-       //      console.log("i got here");
-       //      // console.log(socket);
-       //      Config.set("socket.io", socket);
-       //  });
+      use('App/Http/SocketsControllers/Socket')(Server.getInstance());
 
         
-      Server.listen(Env.get('HOST'), Env.get('PORT'))
+    Server.listen(Env.get('HOST'), Env.get('PORT'))
       if (typeof (callback) === 'function') {
         callback()
       }

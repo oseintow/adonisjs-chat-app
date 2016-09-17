@@ -33,7 +33,8 @@ $(function() {
         e.preventDefault();
         var username = $("#username");
         if(username.val() == "") return;
-        
+
+        personIO.socket.reconnect();
         localStorage.setItem("username", username.val());
         addUser(username.val());
     });

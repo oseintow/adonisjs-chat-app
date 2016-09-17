@@ -21,7 +21,7 @@ class UserSocket{
             callback({name: "socket is working very well with adonis"});
 
             var self = this;
-            self.tom;
+            self.socket = socket;
             co(function *(){
                 self.tom  = yield self.getUsers().next().value;
                 // self.socket.emit("sweet", yield self.getUsers().next().value);

@@ -9,6 +9,7 @@ class PersonSocket{
         this.personIO = this.io.of("/persons");
         this.personIO.on('connection', (socket) => this.init(socket) );
         this.persons = [];
+        this.users = [];
     }
 
     init(socket) {
@@ -20,7 +21,7 @@ class PersonSocket{
     }
 
     disconnect(socket){
-        socket.on('disconnect', () => console.log("client disconnected"));
+        socket.on('disconnect', () => console.log(`client disconnected`));
     }
 
     newUser(socket){
@@ -37,7 +38,6 @@ class PersonSocket{
     getUsers(socket){
         socket.on("get users", (callback) =>{
             callback({users: this.persons})
-            console.log(Object.keys(socket.adapter.rooms));
         });
     }
 
@@ -52,12 +52,13 @@ class PersonSocket{
                 }
             });
             socket.leave(data);
-            socket.disconnect()
+            socket.disconnect();
         });
     }
 
     newMessage(socket){
         socket.on("new message", (data) =>{
+            // this.users[data.receiver].emit("get message",data.message);
             this.personIO.in(data.receiver).emit("get message",data.message);
         });
     }

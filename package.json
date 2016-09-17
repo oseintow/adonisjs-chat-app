@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x 'node --harmony_proxies' server.js",
-    "dev:watch": " PORT=3700 HOST=192.168.1.2 nodemon --watch app --watch bootstrap --watch config --watch .env -x 'node --harmony_proxies' server.js",
+    "dev:watch": " PORT=3700 HOST=10.250.187.43 nodemon --watch app --watch bootstrap --watch config --watch .env -x 'node --harmony_proxies' server.js",
     "start": "node --harmony_proxies server.js"
   },
   "author": "",
@@ -21,9 +21,13 @@
     "adonis-middleware": "^1.0.6",
     "adonis-redis": "^1.0.0",
     "co": "^4.6.0",
+    "ioredis": "^2.2.0",
     "mysql": "^2.11.1",
     "nodemon": "^1.9.2",
+    "redis": "^2.6.2",
     "socket.io": "^1.4.8",
+    "socket.io-ioredis": "^1.4.1",
+    "socket.io-redis": "^1.0.0",
     "sqlite3": "^3.1.4",
     "winston": "^2.2.0",
     "winston-logger": "^1.0.1",

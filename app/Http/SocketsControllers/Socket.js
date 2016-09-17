@@ -8,6 +8,8 @@ const PersonSocket = use('App/Http/SocketsControllers/PersonSocket');
 
 module.exports =  (server) => {
     const io = use('socket.io')(server);
+    const redis = require('socket.io-redis');
+    io.adapter(redis(Config.get("redis.cluster")));
     socketio.io = io;
 
     io.on('connection', (socket) => socketio.socket = socket );
